@@ -1,6 +1,6 @@
 # Slot Machine
 
-A simple slot machine game implemented in Python. Spin the reels, test your luck, and try to win big!
+A simple slot machine game implemented in PHP. Spin the reels, test your luck, and try to win big!
 
 ## Features
 
