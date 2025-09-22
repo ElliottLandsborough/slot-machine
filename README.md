@@ -17,12 +17,18 @@ A simple slot machine game implemented in Python. Spin the reels, test your luck
     git clone https://github.com/yourusername/slot-machine.git
     cd slot-machine
     ```
-2. Run the code (with docker):
+3. Install compoer deps
     ```bash
+    make install
+    ```
+
+3. Run the code (with docker):
+    ```bash
+    make build
     make docker-run
     ```
 
-3. Run the code (without docker):
+4. Run the code (without docker):
     ```
     make run
     ```
