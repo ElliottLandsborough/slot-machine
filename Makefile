@@ -19,7 +19,7 @@ docker-build: ## Build Docker containers
 	docker compose build
 
 docker-run: ## Run the application in Docker
-	docker compose up app
+	docker run -it slot-machine-app php game.php
 
 docker-test: ## Run tests in Docker
 	docker compose up test
@@ -36,3 +36,4 @@ docker-stop: ## Stop all Docker containers
 clean: ## Clean up generated files
 	rm -rf vendor/
 	docker compose down --rmi all --volumes --remove-orphans
+	docker system prune -f
