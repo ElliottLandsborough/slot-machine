@@ -12,7 +12,7 @@ build: ## Build the Docker image
 	docker compose build
 
 run: ## Run the application locally
-	php hello.php
+	php game.php
 
 test: ## Run tests locally
 	composer test
