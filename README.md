@@ -1,4 +1,4 @@
-# Hello World PHP Application
+# Simple Slot Machine PHP Application
 
 A basic command-line PHP application with Docker support, unit testing, and development automation tools.
 
