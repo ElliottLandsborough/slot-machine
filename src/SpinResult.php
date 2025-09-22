@@ -14,6 +14,31 @@ class SpinResult
         public readonly WinType $winType,
         public readonly int $payout
     ) {}
+
+    public function options(): array
+    {
+        return [$this->reel1, $this->reel2, $this->reel3];
+    }
+
+    public function isWin(): bool
+    {
+        return $this->winType !== WinType::NO_WIN;
+    }
+
+    public function payout(): int
+    {
+        return $this->payout;
+    }
+
+    public function __toString(): string
+    {
+        return $this->display();
+    }
+
+    public function symbols(): array
+    {
+        return $this->options();
+    }
     
     public function display(): string
     {
