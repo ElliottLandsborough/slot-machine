@@ -1,5 +1,3 @@
-.PHONY: help install build run test docker-build docker-run docker-test docker-dev docker-shell clean
-
 # Default target
 help: ## Show this help message
 	@echo "Available commands:"
@@ -38,16 +36,3 @@ docker-stop: ## Stop all Docker containers
 clean: ## Clean up generated files
 	rm -rf vendor/
 	docker compose down --rmi all --volumes --remove-orphans
-
-# Development workflow commands
-dev-setup: install build ## Setup development environment
-	@echo "Development environment ready!"
-	@echo "Run 'make docker-dev' to start development container"
-	@echo "Run 'make docker-shell' to access the container"
-
-dev-watch: ## Watch for file changes and run tests
-	@echo "Watching for file changes... (Press Ctrl+C to stop)"
-	@while true; do \
-		make test; \
-		sleep 2; \
-	done

@@ -21,8 +21,8 @@ RUN composer install --no-dev --optimize-autoloader
 # Copy application code
 COPY . .
 
-# Make the hello.php script executable
-RUN chmod +x hello.php
+# Make the game.php script executable
+RUN chmod +x game.php
 
 # Default command
-CMD ["php", "hello.php"]
+CMD ["php", "game.php"]

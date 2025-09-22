@@ -1,6 +1,6 @@
 {
     "name": "elliott/slot-machine",
-    "description": "A basic Hello World command line PHP application",
+    "description": "A basic command line slot machine game in PHP",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",
@@ -23,7 +23,7 @@
     },
     "scripts": {
         "test": "phpunit",
-        "hello": "php hello.php"
+        "game": "php game.php"
     },
     "config": {
         "optimize-autoloader": true,
