@@ -12,6 +12,7 @@ use SlotMachine\Enums\SlotOption;
 
 class GameServiceTest extends TestCase
 {
+    // Test creating a player with default credits
     public function testCreatePlayerInitialCredits()
     {
         $generator = $this->createMock(SymbolGenerator::class);
@@ -22,6 +23,8 @@ class GameServiceTest extends TestCase
         $this->assertEquals(150, $player->credits()->amount());
     }
 
+    // Test playing a spin with mocked symbol generator
+    // Check that is is a win when all spins return DIAMOND.
     public function testPlayWhenSpinReturnsWinningSpinResult()
     {
         $generator = $this->createMock(SymbolGenerator::class);
@@ -37,11 +40,13 @@ class GameServiceTest extends TestCase
         $this->assertGreaterThan(0, $result->payout());
     }
 
+    // Test playing a spin with mocked symbol generator
+    // Check that it is a loss when spins return different symbols
     public function testPlayWhenSpinReturnsLosingSpinResult()
     {
         $generator = $this->createMock(SymbolGenerator::class);
         $generator->method('generate')->willReturnOnConsecutiveCalls(
-            SlotOption::CHERRY,
+            SlotOption::DIAMOND,
             SlotOption::LEMON,
             SlotOption::ORANGE
         );
@@ -56,6 +61,8 @@ class GameServiceTest extends TestCase
         $this->assertEquals(0, $result->payout());
     }
 
+    // Test the paytable format
+    // Just a simple check that it contains expected symbols and payouts
     public function testGetPaytableFormat()
     {
         $generator = $this->createMock(SymbolGenerator::class);

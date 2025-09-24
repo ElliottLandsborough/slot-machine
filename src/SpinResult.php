@@ -5,6 +5,18 @@ namespace SlotMachine;
 use SlotMachine\Enums\SlotOption;
 use SlotMachine\Enums\WinType;
 
+/**
+ * Define the result of a spin with currently three reels.
+ * 
+ * Set the results and also set if it's a win or not.
+ * 
+ * Looking at it now,
+ * $sinType could be called seomthing more like $resultType?
+ * Not sure why I called it winType when it can be a no-win.
+ * Some of the naming in a lot of these classes could be improved.
+ *
+ * @package SlotMachine
+ */
 class SpinResult
 {
     public function __construct(
@@ -40,6 +52,9 @@ class SpinResult
         return $this->options();
     }
     
+    // output reel symbols
+    // output win/lose message
+    // output the amount won if an amount was won
     public function display(): string
     {
         $result = "\n";

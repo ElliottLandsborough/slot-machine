@@ -2,6 +2,17 @@
 
 namespace SlotMachine;
 
+/**
+ * Simple value object to represent player credits.
+ * 
+ * This is like the user's wallet within the slot machine.
+ * 
+ * Basic maths in here let us keep the Credits immutable.
+ * 
+ * Add/subtract, and canAfford methods.
+ * 
+ * @package SlotMachine
+ */
 readonly class Credits
 {
     public function __construct(private int $amount)

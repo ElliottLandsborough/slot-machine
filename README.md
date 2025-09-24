@@ -1,6 +1,6 @@
 # Slot Machine
 
-A simple slot machine game implemented in PHP. Spin the reels, test your luck, and try to win big!
+A simple command line slot machine game implemented in PHP. Spin the reels, test your luck, and try to win big!
 
 ## Features
 
@@ -17,6 +17,7 @@ A simple slot machine game implemented in PHP. Spin the reels, test your luck, a
     git clone https://github.com/yourusername/slot-machine.git
     cd slot-machine
     ```
+
 3. Install compoer deps
     ```bash
     make install
@@ -27,10 +28,20 @@ A simple slot machine game implemented in PHP. Spin the reels, test your luck, a
     make build
     make docker-run
     ```
+    NOTE: running with docker is broken - it uses a cli interface with php fgets function.
+          With more time, I'd have used the symfony command composer package or something else,
+          and spent more time testing this in docker. But ultimately, most times when I've had to
+          create a command line app like this, it is a dev tool anyway, so no need to have it dockerised,
+          apart from the tests, which are working in docker currently.
+
+    ```bash
+    make docker-test
+    ```
 
 4. Run the code (without docker):
     ```
     make run
+    make test
     ```
 
 ## Usage

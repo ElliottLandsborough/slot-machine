@@ -7,7 +7,26 @@ use SlotMachine\Enums\WinType;
 use SlotMachine\GameService;
 use SlotMachine\SymbolGenerator;
 
-// CLI Helper Functions
+/**
+ * This file acts like the display layer / controller for the slot machine game.
+ * It uses the GameService to manage game state and player actions.
+ * 
+ * A glaring issue: there is no persistence layer, so if you exit the app,
+ * you lose all your credits and stats. This could be fixed by adding
+ * a simple file or database storage layer, but for this demo, it's kept simple.
+ * 
+ * Another glaring issue: no user authentication or security.
+ * 
+ * Final glaring issue: no input validation or error handling.
+ * 
+ * And on top of that, the code is a bit messy and could be better organized.
+ * This is just in a single file for simplicity, but in a real app,
+ * you'd want to separate concerns better, put it in its iwn display class,
+ * have some templates, or even a web interface instead of CLI.
+ * 
+ * @return void 
+ */
+
 function clearScreen(): void 
 {
     system('clear');
