@@ -27,3 +27,5 @@ docker-compose.override.yml
 *.tmp
 
 .phpunit.result.cache
+
+QUESTIONS.txt
